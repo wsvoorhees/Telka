@@ -7,12 +7,12 @@
         {
           "Image": "actionDefaultImage",
           "TitleAlignment": "middle",
-          "FontSize": "16"
+          "FontSize": 16
         }
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "Tlačítko snížení hlasitosti na ovladači.",
-      "UUID": "eu.stumpa.telka.volume_down"
+      "UUID": "eu.stumpa.telka.volume-down"
     },
     {
       "Icon": "actionIcon",
@@ -21,21 +21,23 @@
         {
           "Image": "actionDefaultImage",
           "TitleAlignment": "middle",
-          "FontSize": "16"
+          "FontSize": 16
         }
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "Tlačítko zvýšení hlasitosti na ovladači.",
-      "UUID": "eu.stumpa.telka.volume_up"
+      "UUID": "eu.stumpa.telka.volume-up"
     },
     {
       "Icon": "actionIcon",
       "Name": "Tlačítko ztišení",
       "States": [
         {
+          "Image": "actionDefaultImage",
           "Name": "mute"
         },
         {
+          "Image": "actionDefaultImage",
           "Name": "unmute"
         }
       ],
@@ -48,12 +50,13 @@
       "Name": "Tlačítko zvýšení programu",
       "States": [
         {
+          "Image": "actionDefaultImage",
           "Name": "default"
         }
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "Tlačítko zvýšení programu na ovladači.",
-      "UUID": "eu.stumpa.telka.channel_up"
+      "UUID": "eu.stumpa.telka.channel-up"
     },
     {
       "Icon": "actionIcon",
@@ -62,12 +65,12 @@
         {
           "Image": "actionDefaultImage",
           "TitleAlignment": "middle",
-          "FontSize": "16"
+          "FontSize": 16
         }
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "Tlačítko snížení programu na ovladači.",
-      "UUID": "eu.stumpa.telka.channel_down"
+      "UUID": "eu.stumpa.telka.channel-down"
     },
     {
       "Icon": "actionIcon",
@@ -76,7 +79,7 @@
         {
           "Image": "actionDefaultImage",
           "TitleAlignment": "middle",
-          "FontSize": "16"
+          "FontSize": 16
         }
       ],
       "SupportedInMultiActions": true,
@@ -90,7 +93,7 @@
         {
           "Image": "actionDefaultImage",
           "TitleAlignment": "middle",
-          "FontSize": "16"
+          "FontSize": 16
         }
       ],
       "SupportedInMultiActions": true,
@@ -104,7 +107,7 @@
         {
           "Image": "actionDefaultImage",
           "TitleAlignment": "middle",
-          "FontSize": "16"
+          "FontSize": 16
         }
       ],
       "SupportedInMultiActions": true,
@@ -112,12 +115,13 @@
       "UUID": "eu.stumpa.telka.back"
     },
     {
+      "Icon": "actionIcon",
       "Name": "Tlačítko kanálu",
       "States": [
         {
           "Image": "actionDefaultImage",
           "TitleAlignment": "middle",
-          "FontSize": "16"
+          "FontSize": 16
         }
       ],
       "SupportedInMultiActions": true,
@@ -125,30 +129,32 @@
       "UUID": "eu.stumpa.telka.channel"
     },
     {
+      "Icon": "actionIcon",
       "Name": "Nastavit kanál",
       "States": [
         {
           "Image": "actionDefaultImage",
           "TitleAlignment": "middle",
-          "FontSize": "16"
+          "FontSize": 16
         }
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "Nastaví kanál daného čísla.",
-      "UUID": "eu.stumpa.telka.setChannel"
+      "UUID": "eu.stumpa.telka.setchannel"
     },
     {
+      "Icon": "actionIcon",
       "Name": "Nastavit hlasitost",
       "States": [
         {
           "Image": "actionDefaultImage",
           "TitleAlignment": "middle",
-          "FontSize": "16"
+          "FontSize": 16
         }
       ],
       "SupportedInMultiActions": true,
       "Tooltip": "Nastaví hlasitost daného čísla.",
-      "UUID": "eu.stumpa.telka.setVolume"
+      "UUID": "eu.stumpa.telka.setvolume"
     }
   ],
   "SDKVersion": 2,
@@ -159,7 +165,9 @@
   "Name": "Telka",
   "Icon": "pluginIcon",
   "URL": "https://www.elgato.com/gaming/stream-deck",
-  "Version": "1.0",
+  "Version": "1.0.0.0",
+  "UUID": "eu.stumpa.telka",
+  "Category": "Telka",
   "OS": [
     {
       "Platform": "windows",
@@ -167,6 +175,6 @@
     }
   ],
   "Software": {
-    "MinimumVersion": "4.1"
+    "MinimumVersion": "6.4"
   }
 }

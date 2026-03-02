@@ -70,16 +70,16 @@ function connectElgatoStreamDeckSocket(
 
   let actions: WillAppear[] = [];
 
-  let subs: Subscription | undefined;
+  let subs = new Subscription();
 
   ws.pipe(
     filter(isKeyUp),
     tap((msg) => {
       const commands = {
-        'eu.stumpa.telka.volume_down': setVolumeDown(),
-        'eu.stumpa.telka.volume_up': setVolumeUp(),
-        'eu.stumpa.telka.channel_down': setChannelDown(),
-        'eu.stumpa.telka.channel_up': setChannelUp(),
+        'eu.stumpa.telka.volume-down': setVolumeDown(),
+        'eu.stumpa.telka.volume-up': setVolumeUp(),
+        'eu.stumpa.telka.channel-down': setChannelDown(),
+        'eu.stumpa.telka.channel-up': setChannelUp(),
         'eu.stumpa.telka.mute': setMute(!!!msg.payload.state),
         'eu.stumpa.telka.setvolume': setVolume(msg.payload.settings.volume),
         'eu.stumpa.telka.setchannel': setChannel(msg.payload.settings.channel),
@@ -152,15 +152,16 @@ function connectElgatoStreamDeckSocket(
               }
             });
 
-          subs?.add(sub);
+          subs.add(sub);
         }
       } else {
         actions = actions.filter(
-          (act) => act.action === (msg as WillDisappear).action,
+          (act) => act.context !== (msg as WillDisappear).context,
         );
 
         if (!actions.length) {
-          subs?.unsubscribe();
+          subs.unsubscribe();
+          subs = new Subscription();
           unsubscribeLg();
         }
       }
