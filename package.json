@@ -4,7 +4,11 @@
     "build:dev": "esbuild main.ts --bundle --outfile=bundle.js --target=es2015 && esbuild pi/main.ts --bundle --outfile=pi/bundle.js --target=es2015"
   },
   "dependencies": {
-    "esbuild": "^0.14.18",
-    "rxjs": "^7.5.2"
+    "esbuild": "^0.27.3",
+    "rxjs": "^7.5.2",
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }
