@@ -65,7 +65,7 @@ function connectElgatoStreamDeckSocket(
     label!.innerText = 'ID kanálu';
 
     const value = document.getElementById('value') as HTMLInputElement;
-    value.type = 'string';
+    value.type = 'text';
     value.maxLength = 20;
     value.value = settings.channel ?? '';
 
